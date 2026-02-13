@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>محلل المشاعر الذكي | Premium AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+      
+      body {
+        font-family: 'Tajawal', sans-serif;
+        background-color: #050505;
+        overflow-x: hidden;
+        color: #f1f5f9;
+      }
+
+      /* Animated Mesh Background */
+      .mesh-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: radial-gradient(circle at 0% 0%, #1a1a2e 0%, transparent 50%),
+                    radial-gradient(circle at 100% 100%, #16213e 0%, transparent 50%),
+                    radial-gradient(circle at 50% 50%, #0f3460 0%, transparent 50%);
+        overflow: hidden;
+      }
+
+      .mesh-circle {
+        position: absolute;
+        filter: blur(80px);
+        border-radius: 50%;
+        opacity: 0.4;
+        animation: float 20s infinite alternate;
+      }
+
+      @keyframes float {
+        0% { transform: translate(0, 0) scale(1); }
+        100% { transform: translate(100px, 100px) scale(1.2); }
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.1?external=react,react-dom",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+  </head>
+  <body>
+    <div class="mesh-bg">
+      <div class="mesh-circle w-[500px] h-[500px] bg-purple-600/20 top-[-10%] left-[-10%]"></div>
+      <div class="mesh-circle w-[400px] h-[400px] bg-blue-600/20 bottom-[-10%] right-[-10%] animation-delay-2000"></div>
+      <div class="mesh-circle w-[300px] h-[300px] bg-indigo-500/10 top-[40%] left-[30%] animation-delay-4000"></div>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>

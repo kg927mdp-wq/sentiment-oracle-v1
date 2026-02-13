@@ -1,0 +1,5 @@
+{
+  "name": "Sentiment Analyzer AI",
+  "description": "A sophisticated sentiment analysis tool that detects emotions in text and provides detailed feedback with emojis, powered by Gemini 3 Flash.",
+  "requestFramePermissions": []
+}
